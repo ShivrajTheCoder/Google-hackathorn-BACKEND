@@ -76,5 +76,10 @@ exp.login=async(req,res,next)=>{
                     userId:result._id
                 })
             })
+        }).catch(err => {
+            return res.status(500).json({
+                message: "error while logging in",
+                error: err
+            })
         })
 }

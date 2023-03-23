@@ -28,8 +28,11 @@ async function main() {
 
 // Routes
 const UserRoutes=require("./Routes/UserRoutes");
+const HospitalRoutes=require("./Routes/HospitalRoutes");
+
 
 app.use('/user',jsonParser,UserRoutes);
+app.use("/hospital",jsonParser,HospitalRoutes);
 
 app.listen(process.env.PORT,()=>{
     console.log("listening");
